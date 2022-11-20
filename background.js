@@ -1,4 +1,8 @@
+// Time Check (Manage load time)
+console.time('Background Load Time');
+
 // Functions
+
 // Simple constraint function (like P5js)
 function constrain(val, min, max) {
     return Math.min(max, Math.max(min, val));
@@ -22,7 +26,7 @@ function moveImage(qSelector, mouse, leftConstraint, rightConstraint){
 
 // JS Functions
 window.onload = () => { // JS Arrow function works the same as normal function with no arguments or function name
-    console.info('loaded')
+    console.timeEnd('Background Load Time');
     backgound = selectBackgroundImage(backgound)
     for (let i = 1; i < backgound.length; i++) {// Increment from 1 to skip name
         document.getElementById(backgound[i][0]).style.display = "block";

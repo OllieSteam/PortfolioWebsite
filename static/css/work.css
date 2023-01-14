@@ -63,6 +63,10 @@ article{
     content: '> ';
 }
 
+.terminal-output img{
+    height: 500px;
+}
+
 .top-bar {
     height: 15px;
     background-color: #c2c1c1;
@@ -108,6 +112,17 @@ article aside{
     overflow-y: auto;
 }
 
+
 article:last-of-type{
     padding-bottom:50px;
+}
+
+article aside p a:link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+article aside ul{
+    list-style: square;
+    color: var(--global-font-color);
 }

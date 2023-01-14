@@ -50,5 +50,7 @@ var backgound = [
     ['aim-9x', [80, 80]],
     ['missilesmoke', [80, 80]]],
     ['mq9-reaper',
-    ['mq9-reaper', [100, 150]]]
+    ['mq9-reaper', [100, 150]],
+    ['hellfire', [50, 80]],
+    ['hellfire-missilesmoke', [40, 70]]]
 ]

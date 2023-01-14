@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Oliver Chetcuti | Defence Contractor</title>
+        <meta name="description" content="Oliver Chetcuti's Portfolio Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/work.css">
+    </head>
+    <body>
+        <nav class="noselect">
+            <div class="navIcon" onclick="menu()">
+                <div class="icon"></div>
+                <header>
+                    <h1>Oliver Chetcuti</h1><span></span>
+                    <h2>Defence Contractor</h2>
+                </header>
+            </div>
+            <ul id="menu-content">
+                <li>
+                    <a>Home</a>
+                </li>
+                <li>
+                    <a>About Me</a>
+                </li>
+                <li>
+                    <a>Work</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <div class="terminal noselect">
+                    <div class="top-bar">
+                        <div class="button close"></div>
+                        <div class="button minimize"></div>
+                        <div class="button fullscreen"></div>
+                        <h2>Missile Flight Path Simulator</h2>
+                    </div>
+                    <code class="terminal-output">
+                        <p>python3 missile_flight.py</p>
+                        <py-config>
+                            packages = [
+                              "matplotlib",
+                            ]
+                        </py-config> 
+                        <p id="plot">
+                            <py-script src="/static/pyscript/missile_flight.py">
+                            </py-script>
+                        </p>
+                    </code>
+                </div>
+                <aside>
+                    <h3> My Missile Flight Path Simulator Project</h3>
+                    <P> This code is a simulation of a missile's flight path from its initial position, velocity, and acceleration to its target position using the Euler method. The simulation is implemented using Python programming language and utilizes several libraries such as matplotlib, mpl_toolkits, and numpy.<br><br>
+                        The matplotlib library is used to create the 3D plot that displays the target position as a red dot and the missile's flight path as blue dots. The mpl_toolkits library is used to enable the use of Axes3D for the plot.<br><br>
+                        The simulation is initialized with the target position, initial position, velocity, and acceleration of the missile. The fuel burn rate, maximum range, and time step of the simulation are also defined. A while loop is used to simulate the flight of the missile, updating the position, velocity, and acceleration at each iteration. The fuel level is also decreased at each iteration. The missile's position is stored in a list at each time step.<br><br>
+                        The simulation ends when the fuel level reaches zero or the maximum range is reached. The code uses display() function to display the 3D plot, with the target as "plot".<br><br>
+                        Overall, this code is a implementation of a missile flight path simulation using Python programming language and various libraries. It utilizes the Euler method for updating the missile's position, velocity and acceleration, and uses matplotlib to create an informative 3D plot to visualize the simulation. </P>
+                </aside>
+            </article>
+            <article>
+                <div class="terminal noselect">
+                    <div class="top-bar">
+                        <div class="button close"></div>
+                        <div class="button minimize"></div>
+                        <div class="button fullscreen"></div>
+                        <h2>Simple Time and Date</h2>
+                    </div>
+                    <code class="terminal-output">
+                        <p>python3 time_and_date.py</p>
+                        <p>
+                            <py-script>
+                                from datetime import datetime
+                                now = datetime.now()
+                                display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+                            </py-script>
+                        </p>
+                    </code>
+                </div>
+                <aside>
+                    <h3> My Simple Time and Date Python Project</h3>
+                    <P> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra nisl velit, et vulputate sapien viverra vitae. Donec placerat enim condimentum purus vehicula, nec rutrum ipsum finibus. </P>
+                </aside>
+            </article>
+            <article>
+                <div class="terminal noselect">
+                    <div class="top-bar">
+                        <div class="button close"></div>
+                        <div class="button minimize"></div>
+                        <div class="button fullscreen"></div>
+                        <h2>Switchblade 300 and Switchblade 600</h2>
+                    </div>
+                    <code class="terminal-output">
+                        <steam-workshop itemid="2797736391"></steam-workshop>
+                    </code>
+                </div>
+                <aside>
+                    <h3> Switchblade 300 and Switchblade 600 Simulated </h3>
+                    <P> This is a simulation of the Switchblade 300 and Switchblade 600 in the military simulator game ArmA.<br><br>
+                        This simulation was implemented using SQF (Status Quo Function). The model takes advantage of advanced aerodynamics and ballistics to accurately model the drones in real life.<br><br>
+                        I used SQF to create various scripts that control the drone's behavior, such as its movement and navigation. For example, I used SQF to create a script that allows the drone to automatically avoid obstacles and maintain a stable hover. I also used SQF to create the drone's control interface, which allows players to easily control the drone's movement and camera.</P>
+                </aside>
+            </article>
+        </main>
+        <footer>
+            <p>Created by Oliver </p>
+        </footer>
+        <script type='text/javascript' src="static/javascript/menu.js" defer></script>
+        <!-- Not my Code -->
+        <script src="static/javascript/pyscript.js" async defer></script> <!-- https://pyscript.net/ -->
+        <script type='text/javascript' src="static/javascript/steam_workshop.js"></script> <!-- https://www.steamwidgets.com/ -->
+        <script type='text/javascript' src="static/javascript/pyscript-manager.js" defer></script>
+
+    </body>
+</html>

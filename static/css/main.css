@@ -1,0 +1,207 @@
+/* Master CSS File */
+/* Document Constants */
+@font-face {
+    font-family: Inter;
+    src: url(/static/font/Inter.ttf);
+} 
+
+:root{
+    --body-background-color: #000;
+    --body-gradient-background-color: rgba(59, 186, 156, 0.3);
+    --navigation-background-color: rgba(59, 186, 156, 0.8);
+    --footer-font-color: #fff; 
+    --global-font: 'inter', sans-serif; /* Global Font */
+    --global-font-color: #fff;
+    --global-main-color: #000;
+    --global-secondary-color: #3BBA9C;
+    --navigation-transition-speed: all 0.60s;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--body-background-color);
+    background-image: 
+    linear-gradient(45deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%),
+    linear-gradient(45deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%),
+    linear-gradient(315deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%),
+    linear-gradient(315deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%);
+    background-size: 80px 80px;
+    font-family: var(--global-font);
+    overflow-x:hidden;
+}
+
+a, a:hover, a:focus, a:active{
+    color: inherit;
+    text-decoration: inherit;
+    cursor: default;
+}
+
+h1,h2,h3,h4,h5,span,a,p{
+    color: var(--global-font-color);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.background{
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100; /* Not to interact with */
+}
+
+.navIcon {
+    z-index: 100;
+    cursor: pointer;
+    height: 65px;
+    top: 0;
+    position: fixed;
+    display: flex;
+    transition: var(--navigation-transition-speed);
+    width: 100vw;
+    justify-content: space-around;
+    background-color: var(--body-background-color);
+    border-bottom: 10px solid var(--global-secondary-color);
+}
+.navIcon.active{
+    background-color: var(--navigation-background-color);
+    transition: var(--navigation-transition-speed);
+    border-bottom: 10px solid var(--global-font-color);
+}
+.navIcon .icon {
+    position: relative;
+    transition: var(--navigation-transition-speed);
+    background-color: var(--global-secondary-color);
+    width: 40px;
+    height: 5px;
+    right: 15px;
+    top: 30px;
+}
+
+.navIcon header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.navIcon header h1, .navIcon header h2{
+    margin: 0px;
+}
+
+.navIcon header span {
+    transition: var(--navigation-transition-speed);
+    border-right: 5px solid var(--global-secondary-color);
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navIcon .icon:before, .navIcon .icon:after {
+    transition: var(--navigation-transition-speed);
+    width: 40px;
+    height: 5px;
+    left: 0;
+    background-color: var(--global-secondary-color);
+    position: absolute;
+    content: '';
+}
+.navIcon .icon:before {
+    transition: all 0.2s;
+    bottom: 10px;
+}
+.navIcon .icon:after {
+    transition: all 0.2s;
+    top: 10px;
+}
+.navIcon:hover .icon:before {
+    bottom: 12px;
+}
+.navIcon:hover .icon:after {
+    top: 12px;
+}
+.navIcon.active .icon {
+    transition: rotate(180deg);
+    background-color: transparent;
+    right: 10px;
+}
+.navIcon.active .icon:before, .navIcon.active .icon:after {
+    top: 0;
+}
+.navIcon.active .icon:before {
+    transform: rotate(45deg);
+    background-color: var(--global-font-color);
+}
+.navIcon.active .icon:after {
+    transform: rotate(-45deg);
+    background-color: var(--global-font-color);
+}
+.navIcon.active header span {
+    border-right: 5px solid var(--global-font-color);
+    height: 100%;
+}
+/* Nav Content */
+nav ul{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--navigation-transition-speed);
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 8px;
+    top: 75px;
+    font-size: 32px;
+    font-weight: 200;
+    text-transform: uppercase;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    list-style: none;
+    z-index: -30;
+}
+nav ul li:first-child {
+    margin-top: 0;
+}
+
+nav ul li {
+    transition: var(--navigation-transition-speed);
+    color: var(--global-font-color);
+    padding-bottom: 30px;
+}
+nav ul a {
+    transition: var(--navigation-transition-speed);
+}
+nav ul a:hover {
+    letter-spacing: 0.5em;
+    cursor: pointer;
+}
+
+nav ul.open {
+    height: 100vh;
+    width: 100vw;
+    background: var(--navigation-background-color);
+    border-bottom: 1px solid black;
+    z-index: 100;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: var(--footer-font-color);
+    text-align: center;
+    background-color: var(--body-background-color);
+}
+footer p{
+    text-align: left;
+    padding-left: 40px;
+    font-size: 15px;
+}

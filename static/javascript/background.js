@@ -1,9 +1,10 @@
-// Time Check (Manage load time)
-console.time('Background Load Time');
-
-// Functions
-
-// Simple constraint function (like P5js)
+/*
+ * Constrain Function - val, min, max parameters taken
+ * val is the value to be constrained. Expected int or bool values
+ * min is the minimum bound and max is the maximum bound. Expected int or bool values
+ * Function constrains numbers outside of the min or max to the given values.
+ * Returns a int or boolian value depending on input. 
+*/
 function constrain(val, min, max) {
     return Math.min(max, Math.max(min, val));
 }
@@ -26,7 +27,6 @@ function moveImage(qSelector, mouse, leftConstraint, rightConstraint){
 
 // JS Functions
 window.onload = () => { // JS Arrow function works the same as normal function with no arguments or function name
-    console.timeEnd('Background Load Time');
     backgound = selectBackgroundImage(backgound)
     for (let i = 1; i < backgound.length; i++) {// Increment from 1 to skip name
         document.getElementById(backgound[i][0]).style.display = "block";
@@ -34,8 +34,10 @@ window.onload = () => { // JS Arrow function works the same as normal function w
 }
 
 document.onmousemove=function(e) {
-    for (let i = 1; i < backgound.length; i++) {
-        moveImage(document.querySelector('#'+backgound[i][0]),e,backgound[i][1][0],backgound[i][1][1])//For Aircraft (E is mouse passthrough, leftConstraint and right)
+    if (localStorage.getItem('menuPos') == 1){ // Session Storage used to control when the background is moving.
+        for (let i = 1; i < backgound.length; i++) {
+            moveImage(document.querySelector('#'+backgound[i][0]),e,backgound[i][1][0],backgound[i][1][1])//For Aircraft (E is mouse passthrough, leftConstraint and right)
+        }
     }
 }
 // End of JS Functions
@@ -47,6 +49,6 @@ var backgound = [
     ['f35', [150, 150]],
     ['aim-9x', [80, 80]],
     ['missilesmoke', [80, 80]]],
-//   ['mq9-reaper',
-//   ['mq9-reaper', [100, 150]]]
+    ['mq9-reaper',
+    ['mq9-reaper', [100, 150]]]
 ]

@@ -1,0 +1,71 @@
+main{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    transition: all 0.7s;
+    padding-top: 65px;
+    background-color: var(--body-background-color);
+}
+main .left{
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-bottom:50px;
+}
+main .left h2{
+    padding: 6vh 1vw 6vh 15vw;
+    border: 10px solid var(--global-secondary-color);
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+main .left article{
+    margin: 0px 5vw;
+    width: 35vw;
+}
+
+main .left article h3{
+    font-size: 20px;
+}
+
+main .left article p{
+    font-size: 15px;
+}
+
+
+
+main .right{
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-bottom:50px;
+}
+main .right h2{
+    padding: 6vh 15vw 6vh 1vw;
+    border: 10px solid var(--global-secondary-color);
+    font-size: 30px;
+    white-space: nowrap; 
+}
+
+main .right article{
+    margin: 0px 5vw;
+    width: 35vw;
+    text-align: right;
+}
+
+main .right article h3{
+    font-size: 20px;
+}
+
+main .right article p{
+    font-size: 15px;
+}

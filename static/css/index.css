@@ -1,0 +1,35 @@
+/* Main Page */
+#f35, #aim-9x, #missilesmoke, #mq9-reaper, #f35afterburner{
+    display: none;
+    position: absolute;
+    z-index: -100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: left 2.5s, top 2.5s;
+}
+
+#aim-9x{
+    margin-top: 160px;
+    margin-left: 100px;
+}
+
+#missilesmoke{
+    margin-top: -150px;
+    margin-left: -30px;
+    transform: rotate(5deg);
+}
+
+#mq9-reaper{
+    margin-top: -80px;
+}
+
+#hellfire{
+    margin-top: -80px;
+}
+
+#f35afterburner{
+    max-height: 200px;
+    margin-top: 130px;
+    margin-left: 240px;
+}

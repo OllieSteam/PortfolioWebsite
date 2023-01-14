@@ -6,26 +6,43 @@
         <title>Oliver</title>
         <meta name="description" content="Oliver Chetcuti's Portfolio Website">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/index.css">
     </head>
     <body>
         <div class="background noselect">
             <!-- CSS is changed by JS DOM -->
-            <img id="f35afterburner" src="afterburner.png" alt="Afterburner Smoke">
-            <img id="f35" src="f35c.png" alt="F35B Aircraft">
-            <img id="missilesmoke" src="missilesmoke_new.png" alt="Missile Smoke">
-            <img id="aim-9x" src="AIM-9X.png" alt="AIM-9X Anti-Air Missile">
+            <img id="f35afterburner" src="static/img/afterburner.png" alt="Afterburner Smoke">
+            <img id="f35" src="static/img/f35c.png" alt="F35B Aircraft">
+            <img id="missilesmoke" src="static/img/missilesmoke.png" alt="Missile Smoke">
+            <img id="aim-9x" src="static/img/AIM-9X.png" alt="AIM-9X Anti-Air Missile">
 
-            <img id="mq9-reaper" src="MQ9_edited.png" alt="MQ 9 Reaper">
+            <img id="mq9-reaper" src="static/img/MQ9_edited.png" alt="MQ 9 Reaper">
         </div>
-        <main>
-            <h1>
-                Placeholder
-            </h1>
-        </main>
+        <nav class="noselect">
+            <div class="navIcon" onclick="menu()">
+                <div class="icon"></div>
+                <header>
+                    <h1>Oliver Chetcuti</h1><span></span>
+                    <h2>Defence Contractor</h2>
+                </header>
+            </div>
+            <ul id="menu-content">
+                <li>
+                    <a>Home</a>
+                </li>
+                <li>
+                    <a>About Me</a>
+                </li>
+                <li>
+                    <a>Work</a>
+                </li>
+            </ul>
+        </nav>
         <footer>
             <p>Created by Oliver </p>
         </footer>
-        <script src="background.js" async defer></script>
+        <script type='text/javascript' src="static/javascript/background.js" async defer></script>
+        <script type='text/javascript' src="static/javascript/menu.js" defer></script>
     </body>
 </html>

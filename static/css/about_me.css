@@ -14,8 +14,13 @@ main .left{
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
-    overflow-y: auto;
     padding-bottom:50px;
+    overflow-y: auto;
+}
+/* Hide Scrollbar */
+main .left::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 main .left h2{
     padding: 6vh 1vw 6vh 15vw;
@@ -48,6 +53,11 @@ main .right{
     flex-direction: column;
     overflow-y: auto;
     padding-bottom:50px;
+}
+/* Hide Scrollbar */
+main .right::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 main .right h2{
     padding: 6vh 15vw 6vh 1vw;

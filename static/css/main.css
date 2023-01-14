@@ -2,7 +2,7 @@
 /* Document Constants */
 @font-face {
     font-family: Inter;
-    src: url(/static/font/Inter.ttf);
+    src: url(font/Inter.ttf);
 } 
 
 :root{

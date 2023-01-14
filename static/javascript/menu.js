@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let location = window.location.pathname.replace(/^\/?|\/?$/g, "")
     for (let i = 0; i < pages.length; i++) {
         if (location == 0 || pages[i].innerHTML.toLowerCase() == 'home'){
-            pages[i].href = '/index.html'
+            pages[i].href = 'index.html'
         }else{
-            pages[i].href = '/'+pages[i].innerHTML.replace(" ", "_").toLowerCase()+'.html'
+            pages[i].href = pages[i].innerHTML.replace(" ", "_").toLowerCase()+'.html'
         }
     }
 });

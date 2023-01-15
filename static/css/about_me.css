@@ -1,3 +1,6 @@
+/* About me CSS File
+ * All styles here will be applied to about_me.html.
+*/
 main{
     position: relative;
     display: flex;
@@ -7,6 +10,7 @@ main{
     padding-top: 65px;
     background-color: var(--body-background-color);
 }
+/* Left side content */
 main .left{
     display: flex;
     width: 50vw;
@@ -14,7 +18,7 @@ main .left{
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
-    padding-bottom:50px;
+    padding-bottom:50px; /* Allow for footer */
     overflow-y: auto;
 }
 /* Hide Scrollbar */
@@ -22,13 +26,14 @@ main .left::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
+/* Heading in big box */
 main .left h2{
     padding: 6vh 1vw 6vh 15vw;
     border: 10px solid var(--global-secondary-color);
     font-size: 30px;
     white-space: nowrap;
 }
-
+/* Articles */
 main .left article{
     margin: 0px 5vw;
     width: 35vw;
@@ -42,8 +47,7 @@ main .left article p{
     font-size: 15px;
 }
 
-
-
+/* Right side content */
 main .right{
     display: flex;
     width: 50vw;
@@ -52,20 +56,21 @@ main .right{
     align-items: flex-start;
     flex-direction: column;
     overflow-y: auto;
-    padding-bottom:50px;
+    padding-bottom:50px; /* Allow for footer */
 }
 /* Hide Scrollbar */
 main .right::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
+/* Heading in big box */
 main .right h2{
     padding: 6vh 15vw 6vh 1vw;
     border: 10px solid var(--global-secondary-color);
     font-size: 30px;
     white-space: nowrap; 
 }
-
+/* Articles */
 main .right article{
     margin: 0px 5vw;
     width: 35vw;

@@ -1,4 +1,7 @@
-/* Main Page */
+/* index / main page CSS File
+ * All styles here will be applied to index.html.
+*/
+/* Maintain display to hidden and keep in the center*/
 #f35, #aim-9x, #missilesmoke, #mq9-reaper, #f35afterburner,#hellfire,#hellfire-missilesmoke{
     display: none;
     position: absolute;
@@ -8,7 +11,7 @@
     transform: translate(-50%,-50%);
     transition: left 2.5s, top 2.5s;
 }
-
+/* Initial Postion of each item */
 #aim-9x{
     margin-top: 160px;
     margin-left: 100px;

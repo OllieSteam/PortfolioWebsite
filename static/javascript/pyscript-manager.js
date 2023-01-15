@@ -9,7 +9,7 @@
  * Adds CSS show class to each py-script when the added nodes are created by the pyscript libary.
 */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){// Code starting here
     let code = document.querySelectorAll('py-script');
 
     const callback = (mutationList) => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     };
     
-    const observer = new MutationObserver(callback);
+    const observer = new MutationObserver(callback);// To here is taken from the Ref URL with slight modification.
     for (let i = 0; i < code.length; i++) {
         observer.observe(code[i], {childList: true});
     }

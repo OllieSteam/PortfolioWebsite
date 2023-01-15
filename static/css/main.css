@@ -1,10 +1,11 @@
-/* Master CSS File */
-/* Document Constants */
+/* Master CSS File
+ * All styles here will be applied to every document.
+*/
 @font-face {
     font-family: Inter;
     src: url(font/Inter.ttf);
 } 
-
+/* Global Variables */
 :root{
     --body-background-color: #000;
     --body-gradient-background-color: rgba(59, 186, 156, 0.3);
@@ -21,6 +22,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    /* Crosshatch Background */
     background-color: var(--body-background-color);
     background-image: 
     linear-gradient(45deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%),
@@ -28,20 +30,22 @@ body{
     linear-gradient(315deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%),
     linear-gradient(315deg, transparent 49.5%, var(--body-gradient-background-color) 50%, var(--body-gradient-background-color) 50.5%, transparent 51%);
     background-size: 80px 80px;
+    /* Apply font to all text globaly */
     font-family: var(--global-font);
+    /* Hide X way overflow as it is un needed and ugly. */
     overflow-x:hidden;
 }
-
+/* Reset state for hyperlinks */
 a, a:hover, a:focus, a:active{
     color: inherit;
     text-decoration: inherit;
     cursor: default;
 }
-
+/* Set font colour to major text tags */
 h1,h2,h3,h4,h5,span,a,p{
     color: var(--global-font-color);
 }
-
+/* No selection of non essential text */
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
@@ -56,7 +60,7 @@ h1,h2,h3,h4,h5,span,a,p{
     height: 100vh;
     z-index: -100; /* Not to interact with */
 }
-
+/* Manages the burger menu and top level elements */
 .navIcon {
     z-index: 100;
     cursor: pointer;
@@ -70,11 +74,13 @@ h1,h2,h3,h4,h5,span,a,p{
     background-color: var(--body-background-color);
     border-bottom: 10px solid var(--global-secondary-color);
 }
+/* Change bottom border to white */
 .navIcon.active{
     background-color: var(--navigation-background-color);
     transition: var(--navigation-transition-speed);
     border-bottom: 10px solid var(--global-font-color);
 }
+/* Burger Menu Icon */
 .navIcon .icon {
     position: relative;
     transition: var(--navigation-transition-speed);
@@ -84,7 +90,7 @@ h1,h2,h3,h4,h5,span,a,p{
     right: 15px;
     top: 30px;
 }
-
+/* Top level text */
 .navIcon header {
     display: flex;
     align-items: center;
@@ -93,7 +99,7 @@ h1,h2,h3,h4,h5,span,a,p{
 .navIcon header h1, .navIcon header h2{
     margin: 0px;
 }
-
+/* Top level text splitter */
 .navIcon header span {
     transition: var(--navigation-transition-speed);
     border-right: 5px solid var(--global-secondary-color);
@@ -101,7 +107,11 @@ h1,h2,h3,h4,h5,span,a,p{
     margin-left: 10px;
     margin-right: 10px;
 }
-
+/* Change colour */
+.navIcon.active header span {
+    border-right: 5px solid var(--global-font-color);
+}
+/* mid line in burger menu */
 .navIcon .icon:before, .navIcon .icon:after {
     transition: var(--navigation-transition-speed);
     width: 40px;
@@ -111,6 +121,7 @@ h1,h2,h3,h4,h5,span,a,p{
     position: absolute;
     content: '';
 }
+/* top and bottom line in burger menu */
 .navIcon .icon:before {
     transition: all 0.2s;
     bottom: 10px;
@@ -119,20 +130,24 @@ h1,h2,h3,h4,h5,span,a,p{
     transition: all 0.2s;
     top: 10px;
 }
+/* Hover animation affect */
 .navIcon:hover .icon:before {
     bottom: 12px;
 }
 .navIcon:hover .icon:after {
     top: 12px;
 }
+/* Hide middle line when active */
 .navIcon.active .icon {
     transition: rotate(180deg);
     background-color: transparent;
     right: 10px;
 }
+/* Keep item in the correct location after animation */
 .navIcon.active .icon:before, .navIcon.active .icon:after {
     top: 0;
 }
+/* Roate to a cross shape */
 .navIcon.active .icon:before {
     transform: rotate(45deg);
     background-color: var(--global-font-color);
@@ -141,11 +156,7 @@ h1,h2,h3,h4,h5,span,a,p{
     transform: rotate(-45deg);
     background-color: var(--global-font-color);
 }
-.navIcon.active header span {
-    border-right: 5px solid var(--global-font-color);
-    height: 100%;
-}
-/* Nav Content */
+/* Nav dropdown Content */
 nav ul{
     position: fixed;
     display: flex;
@@ -166,10 +177,11 @@ nav ul{
     list-style: none;
     z-index: -30;
 }
+/* Keep item centered and not pushed down inside flex */
 nav ul li:first-child {
     margin-top: 0;
 }
-
+/* animate dropdown and set font colour for hover */
 nav ul li {
     transition: var(--navigation-transition-speed);
     color: var(--global-font-color);
@@ -178,19 +190,19 @@ nav ul li {
 nav ul a {
     transition: var(--navigation-transition-speed);
 }
+/* give correct pointer and add slight animation to show selected item. */
 nav ul a:hover {
     letter-spacing: 0.5em;
     cursor: pointer;
 }
-
+/* Place navgigation bar above all other items and give animation on close*/
 nav ul.open {
     height: 100vh;
     width: 100vw;
     background: var(--navigation-background-color);
-    border-bottom: 1px solid black;
     z-index: 100;
 }
-
+/* Footer always on top but behind menu*/
 footer {
     position: fixed;
     bottom: 0;

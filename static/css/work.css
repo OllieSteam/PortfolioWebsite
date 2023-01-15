@@ -1,5 +1,12 @@
+/* Work CSS File
+ * All styles here will be applied to work.html.
+*/
+/* Page Global Variables */
 :root{
     --terminal-font-color: #000;
+    --terminal-shadow-color: #BBB;
+    --terminal-background-color: #F5F5F5, #cacaca;
+    --terminal-top-bar-color: #c2c1c1;
 }
 
 main{
@@ -14,18 +21,17 @@ main{
     justify-content: flex-start;
     background-color: var(--body-background-color);
 }
-
+/* Hide libary verbose */
 py-terminal, py-splashscreen, py-script, py-config, .py-warning{
     display: none;
     visibility: hidden;
 }
-
+/* Used with JS DOM manipulation */
 .show{
     display: inherit;
     visibility: unset;
 }
-
-
+/* Used with JS DOM manipulation */
 article{
     display: flex;
     flex-direction: row;
@@ -33,19 +39,19 @@ article{
     width: 100vw;
     max-height: 800px;
 }
-
+/* Side boxes to contain projects */
 .terminal {
     position: relative;
-    background: linear-gradient(to bottom, #F5F5F5, #cacaca);
+    background: linear-gradient(to bottom, var(--terminal-background-color));
     margin: 20px;
-    box-shadow: 0px 0px 10px #BBB;
-    border: 1px solid #BBB;
+    box-shadow: 0px 0px 10px var(--terminal-shadow-color);
+    border: 1px solid var(--terminal-shadow-color);
     border-radius: 4px;
     min-width: 300px;
     max-width: 50vw;
     max-height: 800px;
 }
-
+/* Area used to display script */
 .terminal-output{
     display: flex;
     overflow: auto;
@@ -54,25 +60,26 @@ article{
     align-items: flex-start;
     justify-content: flex-start;
 }
-
 .terminal-output p {
     padding: 10px;
     color: var(--terminal-font-color);
 }
+/* Add text to all terminal messages */
 .terminal-output p::before, .terminal-output p py-script div::before{
     content: '> ';
 }
-
+/* stop large images cusing massive scrolling */
 .terminal-output img{
     height: 500px;
 }
-
+/* Bar with title and buttons */
 .top-bar {
     height: 15px;
-    background-color: #c2c1c1;
-    border-bottom: 4px solid #BBB;
+    background-color: var(--terminal-top-bar-color);
+    border-bottom: 4px solid var(--terminal-shadow-color);
     padding-top: 3px;
 }
+/* Last bar was touching item inside the terminal, added buffer */
 .top-bar:last-of-type{
     margin-bottom: 3px;
 }
@@ -84,7 +91,7 @@ article{
     text-align: center;
     color: var(--terminal-font-color);
 }
-
+/* Buttons on top bar */
 .button {
     float: left;
     width: 13px;
@@ -106,13 +113,13 @@ article{
     background-color: #4CD964;
     margin-left: 10px;
 }
-
+/* Text next to the terminal */
 article aside{
     max-width: 50vw;
     overflow-y: auto;
 }
 
-
+/* No clipping into the footer */
 article:last-of-type{
     padding-bottom:50px;
 }
@@ -121,7 +128,7 @@ article aside p a:link{
     text-decoration: underline;
     cursor: pointer;
 }
-
+/* List style in all paragraphs */
 article aside ul{
     list-style: square;
     color: var(--global-font-color);

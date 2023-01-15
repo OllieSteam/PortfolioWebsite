@@ -127,11 +127,11 @@ class SteamWorkshopElem extends HTMLElement
                 author = author.replace(':creator', 'Ollie');
                 
                 let html = `
-                <div class="steam-workshop" style="height: 209px;"` + ((workshopBaseStyle.length > 0) ? 'style="' + workshopBaseStyle + '"' : '') + `>
+                <div class="steam-workshop" style="height: 209px;width: 533px;"` + ((workshopBaseStyle.length > 0) ? 'style="' + workshopBaseStyle + '"' : '') + `>
                     <div class="steam-workshop-preview ` + ((borderCodeWorkshopPreview.length > 0) ? borderCodeWorkshopPreview : '') + `" style="background-image: url('` + json.data.preview_url + `'); ` + ((!showImage) ? 'display: none;' : '') + `"></div>
                 
-                    <div class="steam-workshop-info" style="width: 45%;"` + ((!showImage) ? 'style="top: 13px; width: 150%;"' : '') + `>
-                        <div class="steam-workshop-info-title" ` + ((styleColorTitle !== null) ? 'style="color: ' + styleColorTitle + ';"' : '') + `>` + json.data.title + `</div>
+                    <div class="steam-workshop-info" style="width: 45%;"` + ((!showImage) ? 'style="top: 18px; width: 150%;"' : '') + `>
+                        <div class="steam-workshop-info-title" style="white-space: nowrap;"` + ((styleColorTitle !== null) ? 'style="color: ' + styleColorTitle + ';"' : '') + `>` + json.data.title + `</div>
                 
                         <div class="steam-workshop-info-description" ` + ((styleColorDescription !== null) ? 'style="color: ' + styleColorDescription + ';"' : '') +  `>` + description + `</div>
                 
